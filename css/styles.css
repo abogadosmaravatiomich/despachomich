@@ -40,12 +40,17 @@ body {
 }
 
 .hero {
-  background: linear-gradient(rgba(15,26,43,.85), rgba(15,26,43,.85)),
-              url("../assets/hero.jpg") center/cover;
+  background: linear-gradient(
+      rgba(15, 26, 43, 0.85),
+      rgba(15, 26, 43, 0.85)
+    ),
+    url("../assets/balance-education-money.jpg") center/cover no-repeat;
+
   color: #fff;
-  padding: 120px 0;
+  padding: 140px 0;
   text-align: center;
 }
+
 
 .hero h2 {
   font-size: 38px;
