@@ -41,8 +41,8 @@ body {
 
 .hero {
   background: linear-gradient(
-      rgba(15, 26, 43, 0.50),
-      rgba(15, 26, 43, 0.50)
+      rgba(15, 26, 43, 0.45),
+      rgba(15, 26, 43, 0.45)
     ),
     url("../assets/balance-education-money.jpg") center/cover no-repeat;
 
@@ -58,12 +58,21 @@ body {
 }
 
 .btn {
-  background: #c9a14a;
-  color: #000;
+  background: #222b86;
+  color: #fff;
   padding: 12px 28px;
   text-decoration: none;
   font-weight: bold;
+  border-radius: 4px;
+  transition: all 0.3s ease;
 }
+
+.btn:hover {
+  background: #162c48;
+}
+
+
+
 
 .section {
   padding: 80px 0;
