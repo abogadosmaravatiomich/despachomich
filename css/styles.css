@@ -47,7 +47,7 @@ body {
     url("../assets/balance-education-money.jpg") center/cover no-repeat;
 
   color: #fff;
-  padding: 140px 0;
+  padding: 160px 0;
   text-align: center;
 }
 
@@ -118,11 +118,11 @@ html {
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .logo-img {
-  height: 90px;
+  height: 80px;
 }
 
 .logo-text {
@@ -131,3 +131,111 @@ html {
   font-weight: bold;
 }
 
+/* CONTACTO */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.contact-box {
+  background: #fff;
+  padding: 25px;
+  border-top: 3px solid #1f3a5f;
+  text-align: center;
+}
+
+.contact-box h4 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #1f3a5f;
+}
+
+.contact-box p {
+  margin: 6px 0;
+  font-size: 15px;
+}
+/* WHATSAPP LINK */
+
+.whatsapp-link {
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.whatsapp-link:hover {
+  text-decoration: underline;
+}
+.whatsapp{
+      position:fixed;
+      bottom:20px;right:20px;
+      background:#25D366;
+      color:#fff;
+      padding:15px 20px;
+      border-radius:50px;
+      font-weight:600;
+      z-index:1000;
+    }
+
+/* GOOGLE MAPS LINK */
+
+.maps-link {
+  color: #1f3a5f;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.maps-link:hover {
+  text-decoration: underline;
+}
+/*Areas de practica*/
+/* SERVICIOS - ACORDEÓN */
+
+.services-accordion {
+  max-width: 800px;
+  margin: 40px auto 0;
+}
+
+.service-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.service-title {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: #1f3a5f;
+}
+
+.service-title span {
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.service-item.active .service-title span {
+  transform: rotate(45deg);
+}
+
+.service-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.service-content p {
+  padding: 0 20px 20px;
+  color: #444;
+  line-height: 1.6;
+}
