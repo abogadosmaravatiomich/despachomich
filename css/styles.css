@@ -553,3 +553,13 @@ html {
   }
 
 }
+
+.facebook-link{
+  color:#1877F2;
+  font-weight:bold;
+  text-decoration:none;
+}
+
+.facebook-link:hover{
+  text-decoration:underline;
+}
