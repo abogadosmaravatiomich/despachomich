@@ -125,10 +125,11 @@ html {
   height: 80px;
 }
 
-.logo-text {
+.logo-text{
   color: #fff;
   font-size: 20px;
   font-weight: bold;
+  margin: 0;
 }
 
 /* CONTACTO */
