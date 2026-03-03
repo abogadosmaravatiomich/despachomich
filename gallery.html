@@ -20,7 +20,7 @@
     <!-- MENÚ -->
     <nav>
       <ul class="nav">
-        <li><a href="index.html">Página Principal</a></li>
+        <li><a href="index.html">Ir a Página Principal</a></li>
       </ul>
     </nav>
 
@@ -29,22 +29,34 @@
 
 
   <!-- GALERÍA -->
-  <section class="section" id="galeria">
-    <div class="container">
-      <h3 class="section-title">Galería Institucional</h3>
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Galería Institucional</h2>
 
-      <div class="gallery">
+    <div class="year-cards">
 
-        <img src="assets/img-gallery/foto1.png" alt="Reunión jurídica" class="gallery-img">
-        <img src="assets/img-gallery/foto2.png" alt="Sala de audiencias" class="gallery-img">
-        <img src="assets/img-gallery/foto3.png" alt="Equipo legal" class="gallery-img">
-        <img src="assets/img-gallery/foto4.png" alt="Despacho jurídico" class="gallery-img">
-        <img src="assets/img-gallery/foto1.png" alt="Firma de documentos" class="gallery-img">
-        <img src="assets/img-gallery/foto2.png" alt="Conferencia legal" class="gallery-img">
-
+      <div class="year-card">
+        <h3>2024</h3>
+        <p>Convenio con el DIF Municipal de Maravatío Michoacán</p>
+        <a href="galeria-2024.html" class="btn-year">Ver Galería</a>
       </div>
+
+      <div class="year-card">
+        <h3>2023</h3>
+        <p>Creación del Colegio de Abogados Maravatío</p>
+        <a href="creacion-colegio-2019.html" class="btn-year">Ver Galería</a>
+      </div>
+
+      <div class="year-card">
+        <h3>2022</h3>
+        <p>Vinculación institucional y trabajo intermunicipal.</p>
+        <a href="galeria-2022.html" class="btn-year">Ver Galería</a>
+      </div>
+
     </div>
-  </section>
+
+  </div>
+</section>
 
   <!-- LIGHTBOX -->
     <div class="lightbox" id="lightbox">
@@ -54,5 +66,19 @@
 
     <script src="js/gallery.js"></script>
 
+
+<script>
+function filterYear(year) {
+  const items = document.querySelectorAll('.timeline-item');
+
+  items.forEach(item => {
+    if (year === 'all' || item.dataset.year === year) {
+      item.style.display = "block";
+    } else {
+      item.style.display = "none";
+    }
+  });
+}
+</script>
 </body>
 </html>

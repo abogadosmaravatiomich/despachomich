@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería 2024 - Colegio de Abogados</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-flex">
+
+      <div class="brand">
+        <img src="assets/logo.png" alt="Logo Firma Legal" class="logo-img">
+        <span class="logo-text">
+          Colegio de Abogados de Maravatío de Ocampo, Michoacán, AC
+        </span>
+      </div>
+
+      <nav>
+        <ul class="nav">
+          <li><a href="index.html">Página Principal</a></li>
+          <li><a href="gallery.html">Galería General</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- GALERÍA -->
+  <section class="section" id="galeria">
+    <div class="container">
+      <h2 class="section-title">Apoyo de la Gente Vulnerable en Asesorías Jurídico Legal</h2>
+
+      <!-- IMPORTANTE: ahora tiene ID -->
+      <div class="gallery" id="gallery-2024">
+
+        <!-- Todas tus imágenes -->
+        <img src="assets/convenio-dif-municipal-2022/1.jpeg" alt="Reunión jurídica" class="gallery-img" loading="lazy">
+        <img src="assets/convenio-dif-municipal-2022/2.jpeg" alt="Reunión jurídica" class="gallery-img" loading="lazy">
+        <img src="assets/convenio-dif-municipal-2022/3.jpeg" alt="Reunión jurídica" class="gallery-img" loading="lazy">
+        <img src="assets/convenio-dif-municipal-2022/4.jpeg" alt="Reunión jurídica" class="gallery-img" loading="lazy">
+        <img src="assets/convenio-dif-municipal-2022/5.jpeg" alt="Reunión jurídica" class="gallery-img" loading="lazy">
+        <img src="assets/convenio-dif-municipal-2022/6.jpeg" alt="Reunión jurídica" class="gallery-img" loading="lazy">
+        
+
+
+        <!-- Puedes seguir agregando todas tus imágenes aquí -->
+        <!-- NO necesitas cambiar nada más -->
+
+      </div>
+
+      <!-- PAGINACIÓN -->
+      <div class="pagination" id="pagination-2024"></div>
+
+    </div>
+  </section>
+
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
+
+
+  <!-- SCRIPTS -->
+  <script src="js/gallery.js"></script>
+
+  <script>
+    const imagesPerPage = 12;
+
+    function setupPagination(galleryId, paginationId) {
+
+      const gallery = document.getElementById(galleryId);
+      const pagination = document.getElementById(paginationId);
+      const images = gallery.querySelectorAll(".gallery-img");
+
+      let currentPage = 1;
+
+      function showPage(page) {
+        currentPage = page;
+
+        const start = (page - 1) * imagesPerPage;
+        const end = start + imagesPerPage;
+
+        images.forEach((img, index) => {
+          img.style.display = (index >= start && index < end) ? "block" : "none";
+        });
+
+        updatePagination();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      function updatePagination() {
+        pagination.innerHTML = "";
+        const totalPages = Math.ceil(images.length / imagesPerPage);
+
+        for (let i = 1; i <= totalPages; i++) {
+          const btn = document.createElement("button");
+          btn.innerText = i;
+          btn.className = (i === currentPage) ? "active-page" : "";
+          btn.onclick = () => showPage(i);
+          pagination.appendChild(btn);
+        }
+      }
+
+      showPage(1);
+    }
+
+    // Inicializar paginación
+    setupPagination("gallery-2024", "pagination-2024");
+
+  </script>
+
+</body>
+</html>
