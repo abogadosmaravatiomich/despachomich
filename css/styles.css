@@ -744,3 +744,66 @@ html {
   background: #caa45f !important;
   color: #1e3a5f !important;
 }
+/* === MISIÓN VISIÓN VALORES PROFESIONAL === */
+
+.mvv-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.mvv-card {
+  background: white;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.mvv-card:hover {
+  transform: translateY(-5px);
+}
+
+.mvv-title {
+  font-size: 22px;
+  color: #1e3a5f;
+  margin-bottom: 10px;
+}
+
+.mvv-divider {
+  width: 60px;
+  height: 3px;
+  background: #caa45f;
+  margin-bottom: 20px;
+}
+
+.mvv-divider.center {
+  margin: 15px auto 30px auto;
+}
+
+.valores-section {
+  text-align: center;
+}
+
+.valores-title {
+  font-size: 24px;
+  color: #1e3a5f;
+}
+
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.valor-item {
+  background: white;
+  padding: 18px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
