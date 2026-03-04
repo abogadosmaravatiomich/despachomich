@@ -834,3 +834,8 @@ html {
   color: #caa45f; /* Color dorado institucional */
   font-weight: bold;
 }
+.foto-circular{
+  height:80px;
+  border-radius:50%;
+  object-fit:cover;
+}
