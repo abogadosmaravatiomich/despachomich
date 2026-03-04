@@ -806,4 +806,31 @@ html {
   font-weight: 500;
   transition: 0.3s ease;
 }
+.contact-social {
+  text-align: center;
+  margin-top: 40px;
+}
 
+.social-btn {
+  display: inline-block;
+  padding: 10px 22px;
+  background: #1e3a5f;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.3s ease;
+}
+
+.check-item {
+  list-style: none;
+  position: relative;
+  padding-left: 25px;
+}
+
+.check-item::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #caa45f; /* Color dorado institucional */
+  font-weight: bold;
+}
